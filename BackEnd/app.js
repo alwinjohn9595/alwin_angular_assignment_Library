@@ -243,6 +243,15 @@ app.put('/author/update',verifyToken,(req,res)=>{
 })
 
 
+app.delete('/authorremove/:id',verifyToken,(req,res)=>{
+   
+  id = req.params.id;
+  authordata.findByIdAndDelete({"_id":id})
+  .then(()=>{
+      console.log('success')
+      res.send();
+  })
+})
 
 
 // authors section -----------------enda

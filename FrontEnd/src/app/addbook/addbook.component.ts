@@ -41,7 +41,7 @@ get addbookFormControl() {
       res =>{
         console.log(res)
         alert("User sucessfully added");
-        this.routes.navigate(["/authors"]);
+        this.routes.navigate(["/books"]);
         
       },
       err =>{

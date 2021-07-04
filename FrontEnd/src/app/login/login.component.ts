@@ -39,7 +39,7 @@ password:['',[Validators.required,Validators.pattern(/^(?=.*?[A-Z])(?=.*?[a-z])(
            alert("Welocme User");
            localStorage.setItem('token', res.token);
            
-          this.routes.navigate(['/login'])
+          this.routes.navigate(['/books'])
           
       },
       err =>{

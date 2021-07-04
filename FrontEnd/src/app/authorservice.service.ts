@@ -11,7 +11,7 @@ export class AuthorserviceService {
 
  addauthor(author:any){
 
-   console.log("hai"); 
+   
    return this.http.post<any>(this._addauthorUrl,author);
  }
 
@@ -33,7 +33,7 @@ editauthor(author:any){
 
 deleteauthor(id:any)
 {
-    console.log("hai")
+  
   return this.http.delete("http://localhost:3000/authorremove/"+id)
 
 }

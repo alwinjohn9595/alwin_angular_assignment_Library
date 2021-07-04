@@ -40,9 +40,9 @@
                       <small style="font-family:courier,'new courier';" class="text-muted">Gener:{{author.gener}}  </small>
                       </h4></div>
                     <div class="col-xs-3"></div>
-                    <a  class="btn btn-primary  " *ngIf="_auth.isadmin()" >Update <i class="glyphicon glyphicon-chevron-right"></i></a>
+                    <a  class="btn btn-primary  " *ngIf="_auth.isadmin()" (click)="editAuthors(author)" >Update <i class="glyphicon glyphicon-chevron-right"></i></a>
               &nbsp;
-              <a  class="btn btn-primary" *ngIf="_auth.isadmin()" >Delete <i class="glyphicon glyphicon-chevron-right"></i></a>
+              <a  class="btn btn-primary" *ngIf="_auth.isadmin()" (click)="deleteBooks(author)" >Delete <i class="glyphicon glyphicon-chevron-right"></i></a>
    
                   </div>
                   <br><br>

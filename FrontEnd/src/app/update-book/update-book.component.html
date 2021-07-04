@@ -1,0 +1,66 @@
+<div id="masthead">  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>Edit Book Details
+            <p class="lead"></p>
+          </h1>
+        </div>
+        
+      </div> 
+    </div><!-- /cont -->
+    
+    <!-- /cont -->
+    
+  </div>
+
+  
+<div class="py-5">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <span class="anchor" id="formsigunup"></span>
+  
+        <!-- form card login -->
+        <div class="card ">
+          <div class="card-header">
+            <h3 class="mb-0 text-center">Add Book</h3>
+          </div>
+          <div class="card-body">
+            <form class="form"  (ngSubmit)="editbook()" #addbookFrorm="ngForm" >
+              <div  class="form-group mb-3" >
+                <label for="title">Book Name</label>
+                <input type="text" class="form-control" required [(ngModel)]="book.title" name="title"/>
+                 
+              </div>
+              <div  class="form-group mb-3" >
+                <label for="gener">Book Gener</label>
+                <input type="text" class="form-control" required  [(ngModel)]="book.gener" name="gener"/>
+                
+              </div>
+              <div  class="form-group mb-3" >
+                <label for="Author">Author</label>
+                <input type="text" class="form-control" required [(ngModel)]="book.author" name="author"/>
+                
+              </div>
+              <div  class="form-group mb-3" >
+                <label for="image">Image</label>
+                <input type="text" class="form-control" required [(ngModel)]="book.image"   name="image"/>
+              </div>
+            
+             
+              
+              <button type="submit"    class="btn btn-dark float-right">Add Book</button>
+            </form>                             
+          </div>
+          <!--/card-block-->
+        </div>
+        <!-- /form card login -->
+  
+      </div>
+  
+  
+    </div>
+  </div>
+
+
+

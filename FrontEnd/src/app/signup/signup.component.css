@@ -1,0 +1,37 @@
+.form-group{
+  padding-bottom: 10px;
+  
+}
+
+input {
+    width: 100%;
+    border: none;
+    height: 30px;
+    padding: 0px 40px 0px 10px;
+    font-size: 18px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.form-group label{
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 1.3em;
+    position: relative;
+    display: run-in;
+    color: black;
+}
+
+.card{
+        top: 50px;
+        border-color:  black;
+        border: 2px solid;
+        border-radius: 10px;
+}
+
+input.ng-invalid{
+  border: 1px solid red;
+}
+
+input.ng-valid{
+  border: 2px solid rgb(74, 230, 74);
+}

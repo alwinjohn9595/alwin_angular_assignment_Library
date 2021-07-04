@@ -1,0 +1,81 @@
+<div id="masthead">  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>Add Book
+            <p class="lead"></p>
+          </h1>
+        </div>
+        
+      </div> 
+    </div><!-- /cont -->
+    
+    <!-- /cont -->
+    
+  </div>
+
+  
+<div class="py-5">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <span class="anchor" id="formsigunup"></span>
+  
+        <!-- form card login -->
+        <div class="card ">
+          <div class="card-header">
+            <h3 class="mb-0 text-center">Add Book</h3>
+          </div>
+          <div class="card-body">
+            <form class="form" [formGroup]="addbookForm" (ngSubmit)="addBooks()"  >
+              <div  class="form-group mb-3" >
+                <label for="title">Book Name</label>
+                <input type="text" class="form-control" formControlName="title" name="title"/>
+                 <div class="text-danger" *ngIf="addbookFormControl.title.touched && addbookFormControl.title.invalid">
+                  <span class="error-text" *ngIf="addbookFormControl.title.errors?.required" > Book Name is required</span>
+                  
+                  <span class="error-text" *ngIf="addbookFormControl.title.errors?.pattern">Formate error</span>
+                 </div>
+              </div>
+              <div  class="form-group mb-3" >
+                <label for="gener">Book Gener</label>
+                <input type="text" class="form-control" formControlName="gener" name="gener"/>
+                 <div class="text-danger" *ngIf="addbookFormControl.gener.touched && addbookFormControl.gener.invalid">
+                  <span class="error-text" *ngIf="addbookFormControl.gener.errors?.required" >Gener is required</span>
+                  
+                  <span class="error-text" *ngIf="addbookFormControl.gener.errors?.pattern">Formate error</span>
+                 </div>
+              </div>
+              <div  class="form-group mb-3" >
+                <label for="Author">Author</label>
+                <input type="text" class="form-control" formControlName="author" name="author"/>
+                 <div class="text-danger" *ngIf="addbookFormControl.author.touched && addbookFormControl.author.invalid">
+                  <span class="error-text" *ngIf="addbookFormControl.author.errors?.required" > Author is required</span>
+                  <span class="error-text" *ngIf="addbookFormControl.author.errors?.pattern">Formate error</span>
+                 </div>
+              </div>
+              <div  class="form-group mb-3" >
+                <label for="image">Image</label>
+                <input type="text" class="form-control" formControlName="image"   name="image"/>
+                 <div class="text-danger" *ngIf="addbookFormControl.image.touched && addbookFormControl.image.invalid">
+                  <span class="error-text" *ngIf="addbookFormControl.image.errors?.required" >Image is required</span>
+                  
+                  <span class="error-text" *ngIf="addbookFormControl.image.errors?.pattern">Formate error</span>
+                 </div>
+              </div>
+            
+             
+              
+              <button type="submit" [disabled]="addbookForm.invalid"   class="btn btn-dark float-right">Add Book</button>
+            </form>                             
+          </div>
+          <!--/card-block-->
+        </div>
+        <!-- /form card login -->
+  
+      </div>
+  
+  
+    </div>
+  </div>
+
+

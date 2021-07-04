@@ -1,0 +1,16 @@
+.fluid-container {
+  height:100%;
+  background-color:#ffffff;
+}
+.nav-item{
+  flex-wrap: wrap;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+.navbar-brand{
+  font-weight: 500;
+  font-size: 1.5em;
+}  
+.navbar{
+  background-color: #000000;
+}

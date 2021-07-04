@@ -1,0 +1,27 @@
+.fluid-container{
+    position: absolute;
+
+    top: 250px;
+    left: 180px;
+  -ms-flex-item-align: center
+    
+}
+h1{
+  font-weight: 900;
+  font-size: 5.5em;
+  color:#000000;
+}
+
+#masthead {
+  min-height:199px;
+  background-color:#191919;
+  color:#aaaacc;
+}
+
+#masthead h1 {
+  font-size: 55px;
+  line-height: 1;
+  color:#fefeff;
+  margin-top:90px;
+
+}

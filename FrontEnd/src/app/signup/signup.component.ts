@@ -48,6 +48,7 @@ get signupFormControl() {
         if(err.error.code === 11000){
           alert("email already in use");
         }else{
+          alert("somting Went Worng");
           console.log("somthing Went Wrong")
           
         }

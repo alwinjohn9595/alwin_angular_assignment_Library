@@ -11,8 +11,8 @@ import { JwtHelperService } from '@auth0/angular-jwt';
   providedIn: 'root'
 })
 export class AuthService {
-  private _signupUrl = "http://localhost:3000/signup";
-  private _loginUrl = "http://localhost:3000/login";
+  private _signupUrl = "/api/signup";
+  private _loginUrl = "/api/login";
 
   helper=new JwtHelperService();  
   constructor(private http:HttpClient) { }

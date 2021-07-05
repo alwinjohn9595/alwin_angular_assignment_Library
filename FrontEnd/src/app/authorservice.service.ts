@@ -7,7 +7,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 export class AuthorserviceService {
 
   constructor(private http:HttpClient) { }
-  private _addauthorUrl = "http://localhost:3000/addauthor";
+  private _addauthorUrl = "/api/addauthor";
 
  addauthor(author:any){
 
@@ -16,25 +16,25 @@ export class AuthorserviceService {
  }
 
  getauthors(){
-  return this.http.get("http://localhost:3000/authors");
+  return this.http.get("/api/authors");
 
  }
 
  
  getauthor(id:any){
-  return this.http.get("http://localhost:3000/author/"+id);
+  return this.http.get("/api/author/"+id);
 }
 
 editauthor(author:any){
   console.log('client update')
-    return this.http.put("http://localhost:3000/author/update",author)
+    return this.http.put("/api/author/update",author)
     .subscribe(data =>{console.log(data)})
 }
 
 deleteauthor(id:any)
 {
   
-  return this.http.delete("http://localhost:3000/authorremove/"+id)
+  return this.http.delete("/api/authorremove/"+id)
 
 }
 }

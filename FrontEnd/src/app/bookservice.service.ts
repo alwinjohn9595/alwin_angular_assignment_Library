@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class BookserviceService {
 
   constructor(private http:HttpClient) { }
-  private _addbookUrl = "http://localhost:3000/addbook";
+  private _addbookUrl = "/api/addbook";
 
  addBook(book:any){
 
@@ -16,26 +16,26 @@ export class BookserviceService {
  }
 
  getbooks(){
-   console.log(this.http.get("http://localhost:3000/books"));
+   console.log(this.http.get("/api/books"));
   return this.http.get("http://localhost:3000/books");
 
  }
 
  
  getbook(id:any){
-  return this.http.get("http://localhost:3000/book/"+id);
+  return this.http.get("/api/book/"+id);
 }
 
 editbook(book:any){
   console.log('client update')
-    return this.http.put("http://localhost:3000/book/update",book)
+    return this.http.put("/api/book/update",book)
     .subscribe(data =>{console.log(data)})
 }
 
 deletebook(id:any)
 {
     console.log("hai")
-  return this.http.delete("http://localhost:3000/bookremove/"+id)
+  return this.http.delete("/api/bookremove/"+id)
 
 }
 
